@@ -1,11 +1,10 @@
 {
     "name": "pxt-colour_artec",
     "version": "0.0.0",
-    "description": "",
+    "description": "Colour sensor development",
+    "license": "MIT",
     "dependencies": {
-        "core": "*",
-        "radio": "*",
-        "pxt-colour_artec": "workspace:0b9de605-7190-458c-e24e-1c8a574e56fe"
+        "core": "*"
     },
     "files": [
         "README.md",
@@ -14,7 +13,5 @@
     "testFiles": [
         "test.ts"
     ],
-    "public": true,
-    "preferredEditor": "tsprj",
-    "installedVersion": "workspace:0b9de605-7190-458c-e24e-1c8a574e56fe"
+    "public": true
 }
