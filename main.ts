@@ -17,16 +17,21 @@ enum RGB{
     //% blockId=getRGB block="get colour value %_colourVal"
     export function getRGB(_colour: RGB): number{
         
+        pins.i2cWriteNumber(41, 178, NumberFormat.Int8LE, true);
         
-
-        const red = 2;
-        const green = 0;
-        const blue = 0;
-
+        pins.i2cWriteNumber(41, 179, NumberFormat.Int8LE, true);
+       
+        pins.i2cWriteNumber(41, 182, NumberFormat.Int8LE, true);
+        let _red = pins.i2cReadNumber(41, NumberFormat.UInt16BE, false)
+        pins.i2cWriteNumber(41, 184, NumberFormat.Int8LE, true);
+        let _green = pins.i2cReadNumber(41, NumberFormat.UInt16BE, false)
+        pins.i2cWriteNumber(41, 186, NumberFormat.Int8LE, true);
+        let _blue = pins.i2cReadNumber(41, NumberFormat.UInt16BE, false)
+        
         switch (_colour){
-            case RGB.Red: return red;
-            case RGB.Green: return green;
-            case RGB.Blue: return blue;
+            case RGB.Red: return Math.round(Math.map(_red, 0, 65535, 0, 1023));
+            case RGB.Green: return Math.round(Math.map(_green, 0, 65535, 0, 1023));
+            case RGB.Blue: return Math.round(Math.map(_blue, 0, 65535, 0, 1023));
         }
 
         return 0;
