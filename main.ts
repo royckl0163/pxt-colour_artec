@@ -18,10 +18,9 @@ enum RGB{
     export function getRGB(_colour: RGB): number{
         
         pins.i2cWriteNumber(41, 178, NumberFormat.Int8LE, true);
-        
         pins.i2cWriteNumber(41, 179, NumberFormat.Int8LE, true);
-       
         pins.i2cWriteNumber(41, 182, NumberFormat.Int8LE, true);
+        
         let _red = pins.i2cReadNumber(41, NumberFormat.UInt16BE, false)
         pins.i2cWriteNumber(41, 184, NumberFormat.Int8LE, true);
         let _green = pins.i2cReadNumber(41, NumberFormat.UInt16BE, false)
