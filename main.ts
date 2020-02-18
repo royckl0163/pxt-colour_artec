@@ -17,8 +17,9 @@ enum RGB{
     //% blockId=getRGB block="get colour value %_colourVal"
     export function getRGB(_colour: RGB): number{
         
+        
 
-        const red = 0;
+        const red = 2;
         const green = 0;
         const blue = 0;
 
