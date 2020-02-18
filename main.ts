@@ -15,8 +15,19 @@ enum RGB{
   namespace colour {
 
     //% blockId=getRGB block="get colour value %_colourVal"
-    export function getRGB(_colourVal: RGB): number{
+    export function getRGB(_colour: RGB): number{
+        
 
-       return 0;
+        const red = 0;
+        const green = 0;
+        const blue = 0;
+
+        switch (_colour){
+            case RGB.Red: return red;
+            case RGB.Green: return green;
+            case RGB.Blue: return blue;
+        }
+
+        return 0;
     }
   }
