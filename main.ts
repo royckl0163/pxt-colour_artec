@@ -32,7 +32,5 @@ enum RGB{
             case RGB.Green: return Math.round(Math.map(_green, 0, 65535, 0, 1023));
             case RGB.Blue: return Math.round(Math.map(_blue, 0, 65535, 0, 1023));
         }
-
-        return 0;
     }
   }
