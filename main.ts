@@ -41,6 +41,14 @@ namespace colour {
         let _gVal = Math.round(Math.map(_green, 0, 65535, 0, 1023));
         let _bVal = Math.round(Math.map(_blue, 0, 65535, 0, 1023));
 
+        if ((_rVal >= 0 && _rVal <= 10)) {
+            if ((_gVal >= 0 && _gVal <= 10)) {
+                if ((_bVal >= 0 && _bVal <= 10)) {
+                    return "Bk"; // Black
+                }
+            }
+        }
+
         if ((_rVal >= 245 && _rVal <= 255)) {
             if ((_gVal >= 0 && _gVal <= 10)) {
                 if ((_bVal >= 0 && _bVal <= 10)) {
@@ -60,7 +68,7 @@ namespace colour {
         if ((_rVal >= 0 && _rVal <= 10)) {
             if ((_gVal >= 0 && _gVal <= 10)) {
                 if ((_bVal >= 245 && _bVal <= 255)) {
-                    return "B"; // Blue
+                    return "Be"; // Blue
                 }
             }
         }
