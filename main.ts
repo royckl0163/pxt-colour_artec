@@ -26,6 +26,7 @@ namespace colour {
 
     //% blockId=getRGB block="get colour value %_colourVal"
     export function getRGB(_colour: RGB): number {
+
         switch (_colour) {
             case RGB.Red: return Math.round(Math.map(_red, 0, 65535, 0, 1023));
             case RGB.Green: return Math.round(Math.map(_green, 0, 65535, 0, 1023));
@@ -35,6 +36,27 @@ namespace colour {
 
     //% blockId=getColour block="get colour"
     export function getColour(): string {
-        return "Hi";
+
+        let _rVal = Math.round(Math.map(_red, 0, 65535, 0, 1023));
+        let _gVal = Math.round(Math.map(_green, 0, 65535, 0, 1023));
+        let _bVal = Math.round(Math.map(_blue, 0, 65535, 0, 1023));
+
+        if ((_rVal >= 0 && _rVal <= 10)) {
+            if ((_gVal >= 0 && _gVal <= 10)) {
+                if ((_bVal >= 0 && _bVal <= 10)) {
+                    return "B";
+                }
+            }
+        }
+
+        if ((_rVal >= 245 && _rVal <= 255)) {
+            if ((_gVal >= 0 && _gVal <= 10)) {
+                if ((_bVal >= 0 && _bVal <= 10)) {
+                    return "R";
+                }
+            }
+        }
+
+        return "None";
     }
 }
