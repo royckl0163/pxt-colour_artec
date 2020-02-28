@@ -41,22 +41,62 @@ namespace colour {
         let _gVal = Math.round(Math.map(_green, 0, 65535, 0, 1023));
         let _bVal = Math.round(Math.map(_blue, 0, 65535, 0, 1023));
 
-        if ((_rVal >= 0 && _rVal <= 10)) {
+        if ((_rVal >= 245 && _rVal <= 255)) {
             if ((_gVal >= 0 && _gVal <= 10)) {
                 if ((_bVal >= 0 && _bVal <= 10)) {
-                    return "B";
+                    return "R"; // Red
+                }
+            }
+        }
+
+        if ((_rVal >= 0 && _rVal <= 10)) {
+            if ((_gVal >= 245 && _gVal <= 255)) {
+                if ((_bVal >= 0 && _bVal <= 10)) {
+                    return "G"; // Green
+                }
+            }
+        }
+
+        if ((_rVal >= 0 && _rVal <= 10)) {
+            if ((_gVal >= 0 && _gVal <= 10)) {
+                if ((_bVal >= 245 && _bVal <= 255)) {
+                    return "B"; // Blue
+                }
+            }
+        }
+
+        if ((_rVal >= 245 && _rVal <= 255)) {
+            if ((_gVal >= 245 && _gVal <= 255)) {
+                if ((_bVal >= 0 && _bVal <= 10)) {
+                    return "Y"; // Yellow
                 }
             }
         }
 
         if ((_rVal >= 245 && _rVal <= 255)) {
             if ((_gVal >= 0 && _gVal <= 10)) {
-                if ((_bVal >= 0 && _bVal <= 10)) {
-                    return "R";
+                if ((_bVal >= 245 && _bVal <= 255)) {
+                    return "M"; // Magenta
                 }
             }
         }
 
-        return "None";
+        if ((_rVal >= 0 && _rVal <= 10)) {
+            if ((_gVal >= 245 && _gVal <= 255)) {
+                if ((_bVal >= 245 && _bVal <= 255)) {
+                    return "C"; // Cyan
+                }
+            }
+        }
+
+        if ((_rVal >= 245 && _rVal <= 255)) {
+            if ((_gVal >= 245 && _gVal <= 255)) {
+                if ((_bVal >= 245 && _bVal <= 255)) {
+                    return "W"; // White
+                }
+            }
+        }
+
+        return "Error";
     }
 }
