@@ -68,7 +68,7 @@ namespace colour {
         if ((_rVal >= 0 && _rVal <= 10)) {
             if ((_gVal >= 0 && _gVal <= 10)) {
                 if ((_bVal >= 245 && _bVal <= 255)) {
-                    return "Be"; // Blue
+                    return "B"; // Blue
                 }
             }
         }
@@ -105,6 +105,6 @@ namespace colour {
             }
         }
 
-        return "Error";
+        return "OC";
     }
 }
