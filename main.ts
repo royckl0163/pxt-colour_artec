@@ -24,22 +24,37 @@ namespace colour {
     pins.i2cWriteNumber(41, 186, NumberFormat.Int8LE, true);
     let _blue = pins.i2cReadNumber(41, NumberFormat.UInt16BE, false)
 
+    let _rVal = Math.round(Math.map(_red, 0, 65535, 0, 1023));
+    let _gVal = Math.round(Math.map(_green, 0, 65535, 0, 1023));
+    let _bVal = Math.round(Math.map(_blue, 0, 65535, 0, 1023));
+
     //% blockId=getRGB block="get colour value %_colourVal"
     export function getRGB(_colour: RGB): number {
 
+        if (_rVal > 255)
+            _rVal = 255;
+        else if (_rVal < 0)
+            _rVal = 0;
+
+        if (_gVal > 255)
+            _gVal = 255;
+        else if (_gVal < 0)
+            _gVal = 0;
+
+        if (_bVal > 255)
+            _bVal = 255;
+        else if (_bVal < 0)
+            _bVal = 0;
+
         switch (_colour) {
-            case RGB.Red: return Math.round(Math.map(_red, 0, 65535, 0, 1023));
-            case RGB.Green: return Math.round(Math.map(_green, 0, 65535, 0, 1023));
-            case RGB.Blue: return Math.round(Math.map(_blue, 0, 65535, 0, 1023));
+            case RGB.Red: return _rVal;
+            case RGB.Green: return _gVal;
+            case RGB.Blue: return _bVal;
         }
     }
 
     //% blockId=getColour block="get colour"
     export function getColour(): string {
-
-        let _rVal = Math.round(Math.map(_red, 0, 65535, 0, 1023));
-        let _gVal = Math.round(Math.map(_green, 0, 65535, 0, 1023));
-        let _bVal = Math.round(Math.map(_blue, 0, 65535, 0, 1023));
 
         if ((_rVal >= 0 && _rVal <= 10)) {
             if ((_gVal >= 0 && _gVal <= 10)) {
