@@ -28,24 +28,23 @@ namespace colour {
     let _gVal = Math.round(Math.map(_green, 0, 65535, 0, 1023));
     let _bVal = Math.round(Math.map(_blue, 0, 65535, 0, 1023));
 
+    if (_rVal > 255)
+        _rVal = 255;
+    else if (_rVal < 0)
+        _rVal = 0;
+
+    if (_gVal > 255)
+        _gVal = 255;
+    else if (_gVal < 0)
+        _gVal = 0;
+
+    if (_bVal > 255)
+        _bVal = 255;
+    else if (_bVal < 0)
+        _bVal = 0;
+
     //% blockId=getRGB block="get colour value %_colourVal"
     export function getRGB(_colour: RGB): number {
-
-        if (_rVal > 255)
-            _rVal = 255;
-        else if (_rVal < 0)
-            _rVal = 0;
-
-        if (_gVal > 255)
-            _gVal = 255;
-        else if (_gVal < 0)
-            _gVal = 0;
-
-        if (_bVal > 255)
-            _bVal = 255;
-        else if (_bVal < 0)
-            _bVal = 0;
-
         switch (_colour) {
             case RGB.Red: return _rVal;
             case RGB.Green: return _gVal;
