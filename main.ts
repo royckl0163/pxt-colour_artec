@@ -11,7 +11,7 @@ enum RGB {
     Blue
 }
 
-//% color=#5b99a5 weight=100 icon="\uf009" block="colour_artec"
+//% color=#5b99a5 weight=100 icon="\uf009" block="colour sensor_artec"
 namespace colour {
 
     pins.i2cWriteNumber(41, 178, NumberFormat.Int8LE, true);
@@ -43,7 +43,7 @@ namespace colour {
     else if (_bVal < 0)
         _bVal = 0;
 
-    //% blockId=getRGB block="get colour value %_colourVal from colour sensor"
+    //% blockId=getRGB block="get colour value %_colourVal"
     export function getRGB(_colour: RGB): number {
         switch (_colour) {
             case RGB.Red: return _rVal;
