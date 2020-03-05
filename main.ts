@@ -43,7 +43,7 @@ namespace colour {
     else if (_bVal < 0)
         _bVal = 0;
 
-    //% blockId=getRGB block="get colour value %_colourVal"
+    //% blockId=getRGB block="get colour sensor value %_colourVal"
     export function getRGB(_colour: RGB): number {
         switch (_colour) {
             case RGB.Red: return _rVal;
@@ -52,7 +52,7 @@ namespace colour {
         }
     }
 
-    //% blockId=getColour block="get colour"
+    //% blockId=getColour block="get colour sensor colour"
     export function getColour(): string {
 
         if ((_rVal >= 0 && _rVal <= 10)) {
