@@ -11,29 +11,6 @@ enum RGB {
     Blue
 }
 
-enum ON_OFF {
-    //% block="ON"
-    ON,
-    //% block="OFF"
-    OFF
-}
-
-enum open_close {
-    //% block="open"
-    Open,
-    //% block="close"
-    Close
-}
-
-enum device {
-    //% block="Light"
-    Light,
-    //% block="Fans"
-    Fans,
-    //% block="Door"
-    Door
-}
-
 //% color=#ea3e5b weight=100 icon="\uf009" block="colour sensor_artec"
 namespace colour {
 
@@ -143,11 +120,5 @@ namespace colour {
         }
 
         return "OC";
-    }
-
-    //% blockId=isPlugOpen block="Smart Plug is %_plugStatus"
-    export function isPlugOpen(_status: ON_OFF): boolean {
-
-        return true;
     }
 }
