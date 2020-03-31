@@ -139,4 +139,9 @@ namespace colour {
     export function onPlug(_status: ON_OFF): void {
         
     }
+
+    //% blockId=pause block="Wait %_second seconds"
+    export function pause(_time: number): void {
+
+    }
 }
