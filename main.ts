@@ -13,9 +13,16 @@ enum RGB {
 
 enum ON_OFF {
     //% block="ON"
-    open,
+    ON,
     //% block="OFF"
-    close
+    OFF
+}
+
+enum open_close {
+    //% block="open"
+    Open,
+    //% block="close"
+    Close
 }
 
 enum device {
@@ -138,8 +145,14 @@ namespace colour {
         return "OC";
     }
 
-    //% blockId=isOpen block="Door is %_plugStatus"
-    export function isOpen(_status: ON_OFF): boolean {
+    //% blockId=isPlugOpen block="Smart Plug is %_plugStatus"
+    export function isPlugOpen(_status: ON_OFF): boolean {
+
+        return true;
+    }
+
+    //% blockId=isDoorOpen block="Door is %_doorStatus"
+    export function isDoorOpen(_status: open_close): boolean {
 
         return true;
     }
