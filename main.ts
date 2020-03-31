@@ -11,14 +11,6 @@ enum RGB {
     Blue
 }
 
-enum isnt {
-    //% block="close"
-    close,
-    //% block="open"
-    open
-
-}
-
 //% color=#ea3e5b weight=100 icon="\uf009" block="colour sensor_artec"
 namespace colour {
 
@@ -128,11 +120,5 @@ namespace colour {
         }
 
         return "OC";
-    }
-
-    //% blockId=isDoorOpen block="Door is %_doorStatus"
-    export function isDoorOpen(_status: isnt): boolean {
-
-        return true;
     }
 }
