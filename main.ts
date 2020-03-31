@@ -12,10 +12,10 @@ enum RGB {
 }
 
 enum isnt {
-    //% block="is"
-    is,
-    //% block="isn't"
-    not
+    //% block="close"
+    close,
+    //% block="open"
+    open
 
 }
 
@@ -130,7 +130,7 @@ namespace colour {
         return "OC";
     }
 
-    //% blockId=isDoorOpen block="Someone %_doorStatus here"
+    //% blockId=isDoorOpen block="Door is %_doorStatus here"
     export function isDoorOpen(_status: isnt): boolean {
 
         return true;
