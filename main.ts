@@ -13,16 +13,18 @@ enum RGB {
 
 enum ON_OFF {
     //% block="ON"
-    ON,
+    open,
     //% block="OFF"
-    OFF
+    close
 }
 
 enum device {
     //% block="Light"
     Light,
     //% block="Fans"
-    Fans
+    Fans,
+    //% block="Door"
+    Door
 }
 
 //% color=#5b99a5 weight=100 icon="\uf009" block="colour sensor_artec"
