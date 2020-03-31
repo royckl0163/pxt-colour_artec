@@ -19,7 +19,7 @@ enum isnt {
 
 }
 
-//% color=#e1596c weight=100 icon="\uf009" block="colour sensor_artec"
+//% color=#ea3e5b weight=100 icon="\uf009" block="colour sensor_artec"
 namespace colour {
 
     pins.i2cWriteNumber(41, 178, NumberFormat.Int8LE, true);
