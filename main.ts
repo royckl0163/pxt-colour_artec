@@ -18,6 +18,13 @@ enum ON_OFF {
     OFF
 }
 
+enum device {
+    //% block="Light"
+    Light,
+    //% block="Fans"
+    Fans
+}
+
 //% color=#5b99a5 weight=100 icon="\uf009" block="colour sensor_artec"
 namespace colour {
 
@@ -129,14 +136,14 @@ namespace colour {
         return "OC";
     }
 
-    //% blockId=isOpen block="Smart Plug is %_plugStatus"
+    //% blockId=isOpen block="Door is %_plugStatus"
     export function isOpen(_status: ON_OFF): boolean {
 
         return true;
     }
 
-    //% blockId=onPlug block="Turn smart plug %_plugVal"
-    export function onPlug(_status: ON_OFF): void {
+    //% blockId=onPlug block="Turn %deviceSet %_plugVal"
+    export function onPlug(_device: device,_status: ON_OFF): void {
         
     }
 
