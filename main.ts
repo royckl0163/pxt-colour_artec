@@ -158,7 +158,7 @@ namespace colour {
     }
 
     //% blockId=onPlug block="Turn Smart Plug %_plugVal"
-    export function onPlug(_device: device,_status: ON_OFF): void {
+    export function onPlug(_status: ON_OFF): void {
         
     }
 
