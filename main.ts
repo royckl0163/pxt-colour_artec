@@ -129,7 +129,7 @@ namespace colour {
         return "OC";
     }
 
-    //% blockId=isOpen block="Door is %_doorStatus"
+    //% blockId=isOpen block="Smart Plug is %_doorStatus"
     export function isOpen(_status: ON_OFF): boolean {
 
         return true;
