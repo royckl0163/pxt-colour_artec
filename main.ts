@@ -11,6 +11,13 @@ enum RGB {
     Blue
 }
 
+enum ON_OFF {
+    //% block="ON"
+    ON,
+    //% block="OFF"
+    OFF
+}
+
 //% color=#5b99a5 weight=100 icon="\uf009" block="colour sensor_artec"
 namespace colour {
 
@@ -122,8 +129,8 @@ namespace colour {
         return "OC";
     }
 
-    //% blockId=isColour block="Check colour"
-    export function isColour(): boolean {
+    //% blockId=isColour block="Door is %doorStatus"
+    export function isColour(_status: ON_OFF): boolean {
 
         return true;
     }
