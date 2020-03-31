@@ -140,7 +140,7 @@ namespace colour {
         
     }
 
-    //% blockId=pause block="Wait %_second seconds"
+    //% blockId=pause block="wait %_second seconds"
     export function pause(_time: number): void {
 
     }
