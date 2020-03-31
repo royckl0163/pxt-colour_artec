@@ -34,7 +34,7 @@ enum device {
     Door
 }
 
-//% color=#ffa500 weight=100 icon="\uf009" block="colour sensor_artec"
+//% color=#ea3e5b weight=100 icon="\uf009" block="colour sensor_artec"
 namespace colour {
 
     pins.i2cWriteNumber(41, 178, NumberFormat.Int8LE, true);
@@ -143,5 +143,11 @@ namespace colour {
         }
 
         return "OC";
+    }
+
+    //% blockId=isDoorOpen block="Door is %_doorStatus"
+    export function isDoorOpen(_status: open_close): boolean {
+
+        return true;
     }
 }
