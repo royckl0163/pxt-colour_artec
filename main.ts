@@ -121,4 +121,10 @@ namespace colour {
 
         return "OC";
     }
+
+    //% blockId=isColour block="Check colour"
+    export function isColour(): boolean {
+
+        return true;
+    }
 }
