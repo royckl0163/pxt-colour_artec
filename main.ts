@@ -129,8 +129,8 @@ namespace colour {
         return "OC";
     }
 
-    //% blockId=isColour block="Door is %_doorStatus"
-    export function isColour(_status: ON_OFF): boolean {
+    //% blockId=isOpen block="Door is %_doorStatus"
+    export function isOpen(_status: ON_OFF): boolean {
 
         return true;
     }
