@@ -140,7 +140,7 @@ namespace colour {
         
     }
 
-    //% blockId=temp block=""
+    //% blockId=temp block=" "
     export function temp(_null: ON_OFF): void {
 
     }
