@@ -139,9 +139,4 @@ namespace colour {
     export function onPlug(_status: ON_OFF): void {
         
     }
-
-    //% blockId=temp block=" "
-    export function temp(_null: ON_OFF): void {
-
-    }
 }
