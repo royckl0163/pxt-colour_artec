@@ -11,7 +11,14 @@ enum RGB {
     Blue
 }
 
-//% color=#5b99a5 weight=100 icon="\uf009" block="colour sensor_artec"
+enum ONOFF {
+    //% block="ON"
+    ON,
+    //% block="OFF"
+    OFF
+}
+
+//% color=#ea3e5b weight=100 icon="\uf009" block="colour sensor_artec"
 namespace colour {
 
     pins.i2cWriteNumber(41, 178, NumberFormat.Int8LE, true);
@@ -43,7 +50,7 @@ namespace colour {
     else if (_bVal < 0)
         _bVal = 0;
 
-    //% blockId=getRGB block="get colour value %_colourVal"
+    //% blockId=getRGB block="get colour sensor value %_colourVal"
     export function getRGB(_colour: RGB): number {
         switch (_colour) {
             case RGB.Red: return _rVal;
@@ -52,7 +59,7 @@ namespace colour {
         }
     }
 
-    //% blockId=getColour block="get colour"
+    //% blockId=getColour block="get colour sensor colour"
     export function getColour(): string {
 
         if ((_rVal >= 0 && _rVal <= 10)) {
@@ -121,4 +128,10 @@ namespace colour {
 
         return "OC";
     }
+
+    //% blockId=ctrlPlug block="set Smart Plug to %status"
+    export function ctrlPlug(_status: ONOFF): void {
+
+    }
+    
 }
