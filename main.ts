@@ -129,8 +129,9 @@ namespace colour {
         return "OC";
     }
 
+    //% color=#ff0000
     //% blockId=onPlug block="set Smart Plug to %_plugVal"
     export function onPlug(_status: ON_OFF): void {
-
+        
     }
 }
