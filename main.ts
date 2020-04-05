@@ -11,13 +11,6 @@ enum RGB {
     Blue
 }
 
-enum ON_OFF {
-    //% block="ON"
-    ON,
-    //% block="OFF"
-    OFF
-}
-
 //% color=#ea3e5b weight=100 icon="\uf009" block="colour sensor_artec"
 namespace colour {
 
@@ -127,11 +120,5 @@ namespace colour {
         }
 
         return "OC";
-    }
-
-    //% color=#ea3e5b
-    //% blockId=onPlug block="set Smart Plug to %_plugVal"
-    export function onPlug(_status: ON_OFF): void {
-        
     }
 }
